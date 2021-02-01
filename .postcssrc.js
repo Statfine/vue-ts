@@ -2,20 +2,22 @@
  * @Description:
  * @Author: shaojia
  * @Date: 2021-01-27 19:11:16
- * @LastEditTime: 2021-01-27 19:14:29
+ * @LastEditTime: 2021-01-29 13:32:36
  * @LastEditors: shaojia
  */
-const path = require('path');
+// const path = require("path");
 
-module.exports = ({ file }) => {
-  const designWidth = file.dirname.includes(path.join('node_modules', 'vant')) ? 375 : 750;
-
+// module.exports = ({ file }) => {
+// const designWidth = file.dirname.includes(path.join("node_modules", "vant"))
+//   ? 375
+//   : 750;
+module.exports = () => {
   return {
     plugins: {
       autoprefixer: {},
       "postcss-px-to-viewport": {
         unitToConvert: "px",
-        viewportWidth: designWidth,
+        viewportWidth: 375,
         unitPrecision: 6,
         propList: ["*"],
         viewportUnit: "vw",
@@ -27,6 +29,5 @@ module.exports = ({ file }) => {
         landscape: false
       }
     }
-  }
-
-}
+  };
+};

@@ -1,0 +1,11 @@
+.fieldset {
+  height: 24px;
+  border: 1px solid transparent;
+  border-top-color: #4885ed;
+}
+
+.legend {
+  margin: auto;
+  padding: 0 10px;
+  color: #4885ed;
+}
